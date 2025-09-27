@@ -55,8 +55,6 @@ if __name__ == '__main__':
                                         ])
             }
 
-    clean_train_data, clean_test_data = utils.load_cifar10_data(args.data_path,trans['aug'],trans['clean'])
-
     if args.data_aug == 'Standard':
         trans['aug'] = transforms.Compose([transforms.RandomHorizontalFlip(),
                                         transforms.RandomCrop(32, 4),
